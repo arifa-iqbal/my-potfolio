@@ -1,17 +1,14 @@
 import { StrictMode } from 'react'
-
-import { BrowserRouter } from 'react-router-dom';
-import { createRoot } from "react-dom/client";
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 import "./index.css"
 import App from './App.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const root = createRoot(document.getElementById("root"));
-
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>  {/* Wrap your app with BrowserRouter */}
+    <BrowserRouter>
       <App />
     </BrowserRouter>
-  </StrictMode>
-);
+  </StrictMode>,
+)
